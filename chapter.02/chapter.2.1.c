@@ -106,6 +106,9 @@ void Initialize(int argc, char* argv[]) {
             "INFO: OpenGL Version: %s\n",
             glGetString(GL_VERSION)
             );
+    
+    CreateShaders();
+    CreateVBO();
 
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 }
