@@ -186,3 +186,8 @@ void TimerFunction(int Value) {
     FrameCount = 0;
     glutTimerFunc(250, TimerFunction, 1);
 }
+
+void Cleanup(void) {
+    DestroyShaders();
+    DestroyVBO();
+}
