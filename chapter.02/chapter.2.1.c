@@ -143,6 +143,8 @@ void InitWindow(int argc, char* argv[]) {
     glutDisplayFunc(RenderFunction);
     glutIdleFunc(IdleFunction);
     glutTimerFunc(0, TimerFunction, 0);
+
+    glutCloseFunc(Cleanup);
 }
 
 void ResizeFunction(int Width, int Height) {
