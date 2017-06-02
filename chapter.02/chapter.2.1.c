@@ -71,6 +71,12 @@ void RenderFunction(void);
 void TimerFunction(int);
 void IdleFunction(void);
 
+void Cleanup(void);
+void CreateVBO(void);
+void DestroyVBO(void);
+void CreateShaders(void);
+void DestroyShaders(void);
+
 int main(int argc, char* argv[]) {
     Initialize(argc, argv);
 
