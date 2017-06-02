@@ -25,6 +25,14 @@ int
 
 unsigned FrameCount = 0;
 
+GLuint
+    VertexShaderId,
+    FragmentShaderId,
+    ProgramId,
+    VaoId,
+    VboId,
+    ColorBufferId;
+
 void Initialize(int, char*[]);
 void InitWindow(int, char*[]);
 void ResizeFunction(int, int);
