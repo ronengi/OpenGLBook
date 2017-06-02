@@ -47,6 +47,19 @@ const GLchar* VertexShader = {
     "}\n"
 };
 
+const GLchar* FragmentShader = {
+    "#version 400\n"\
+
+    "in vec4 ex_Color;\n"\
+    "out vec4 out_Color;\n"\
+
+    "void main(void)\n"\
+    "{\n"\
+    "  out_Color = ex_Color;\n"\
+    "}\n"
+};
+
+
 void Initialize(int, char*[]);
 void InitWindow(int, char*[]);
 void ResizeFunction(int, int);
