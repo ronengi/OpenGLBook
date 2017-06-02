@@ -235,3 +235,28 @@ void CreateVBO(void) {
     exit(-1);
     }
 }
+
+void DestroyVBO(void) {
+    GLenum ErrorCheckValue = glGetError();
+
+    glDisableVertexAttribArray(1);
+    glDisableVertexAttribArray(0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glDeleteBuffers(1, &ColorBufferId);
+    glDeleteBuffers(1, &VboId);
+
+    glBindVertexArray(0);
+    glDeleteVertexArrays(1, &VaoId);
+
+    ErrorCheckValue = glGetError();
+    if (ErrorCheckValue != GL_NO_ERROR) {
+        fprintf(
+            stderr,
+            "ERROR: Could not destroy the VBO: %s \n",
+            gluErrorString(ErrorCheckValue)
+        );
+
+    exit(-1);
+    }
+}
